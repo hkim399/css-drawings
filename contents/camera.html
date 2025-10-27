@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .camera {
+            width: 205px;
+            height: 155px;
+            background-color: #D6D6D6;
+            border-radius: 15px;
+
+            /* horizontal offset, vertical offset, blur radius, spread radius, colour */
+            /* want bottom so for horizontal, make it 0 */
+            /* push 10px straight down from bottom edge of the box */
+            /* 15px blur radius. higher the value, more diffused ansd spread out */
+            /* -13px sets the shadow's size. negative value shrinks the shadow's size inward. to show concentrated drop shadow effect */
+            /* https://cssgenerator.org/box-shadow-css-generator.html */
+            box-shadow: 0 10px 15px -13px black;
+
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lense {
+            width: 125px;
+            height: 125px;
+            background-color: #F5F5F5;
+            box-shadow: 0 8px 0 0 #C0C0C0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+        }
+        .inner-lense {
+            width: 105px;
+            height: 105px;
+            background-color: #00695C;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+        }
+
+        .inner-lense-2 {
+            /* width: 85px;
+            height: 85px; */
+            border-top: 31px solid #00897B;
+            border-right: 31px solid #4DB6AC;
+            border-bottom: 31px solid #80CBC4;
+            border-left: 31px solid #26A69A;
+
+            border-radius: 50%;
+        }
+
+        .flash {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #F5F5F5;
+            border-radius: 50%;
+            box-shadow: 0 4px 0 0 #C0C0C0;
+            right: 15px;
+            top: 15px;
+
+        }
+
+        .button {
+            position: absolute;
+            width: 30px;
+            height: 5px;
+            background-color: #009587;
+            border-radius: 60px;
+            top: -5px;
+            left: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="camera">
+        <div class="lense">
+            <div class="inner-lense">
+                <div class="inner-lense-2"></div>
+            </div>
+        </div>
+        <div class="flash"></div>
+        <div class="button"></div>
+    </div>
+</body>
+</html>

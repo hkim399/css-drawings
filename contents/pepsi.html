@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepsi Logo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* for adding gradient background */
+            /* linear=gradient( direction, colour_1, colour_2, ...) */
+            /* 135deg angle from bottom-left to top-right */
+            /* colour_1 = #00A6B7 0% ==> start from dark cyan/teal with 0% color stop == gradient starts with this colour at the beginning of the gradient line */
+            /* colour_2 =  #73FAC9 ==> ending colour with light mint green, when there is no percentage, the gradient will fully transition to this colour by the end of the gradient line*/
+            background-image: linear-gradient(135deg,#00A6B7 0%,#73FAC9);
+        }
+        .pepsi {
+            height: 300px;
+            width: 300px;
+            background-color: #34588e;
+            border-radius: 50%;
+            border: 10px solid white;
+            position: relative;
+
+            /* need this so the before and after does not overlap and is behind the original */
+            overflow: hidden;
+        }
+        .pepsi:before {
+            /* because we don't want any text message */
+            content: "";
+            position: absolute;
+            height: 400px;
+            width: 500px;
+            background-color: white;
+            border-radius: 25%;
+            /* recommend use inspect elements using key up and down for top element to help adjust to your liking */
+            top: -160px;
+            left: -240px;
+            transform: rotate(-18deg);
+        }
+        .pepsi::after {
+            content: "";
+            position: absolute;
+            height: 500px;
+            width: 550px;
+            background-color: #da473c;
+            border-radius: 50%;
+            /* position so it fits */
+            top: -275px;
+            left: -300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pepsi"></div>
+</body>
+</html>

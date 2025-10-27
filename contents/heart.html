@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Envelope</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .envelope {
+            width: 0;
+            height: 0;
+            border-top: 100px solid #eee;
+            border-right: 170px solid #ddd;
+            border-left: 170px solid #ccc;
+            border-bottom: 100px solid #ccc;
+        }
+        /* if just width and height with background, it will start from top right corner from the middle of the envelope */
+        .heart {
+            width: 32px;
+            height: 32px;
+            background-color: #ff3838;
+            /* translate moves the object  horizontal, vertical*/
+            transform: translate(-50%,-50%) rotate(45deg) ;
+            /* after creating heart, rotate to make it look straight up */
+            /* if you want to see the before and after, change the before and after colour to differnt colour so what your before and after entity is actually located at. */
+            
+            /* add animation here  */
+            /* type of animation, time duration, consistency: linear, loop */
+            animation: heartbeat 1.4s linear infinite;
+        }
+        .heart:before {
+            /* content is empty with 0s and 100% because we want to keep same width and height*/
+            /* treat this as separate entity because we don't want any text message  */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background-color: blue; */
+            background-color: red;
+
+            /* if you want to see the red behind it */
+            transform: translateY(-50%);
+            /* to make it circle */
+            border-radius: 50%;
+        }
+        .heart:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background-color: green; */
+            background-color: red;
+            /* if you want to see the red behind it */
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+
+        @keyframes heartbeat {
+            /* to help start from original size, need to make it scale 1 */
+            0% {transform: translate(-50%,-50%) rotate(45deg) scale(1);}
+
+            25% {transform: translate(-50%,-50%) rotate(45deg) scale(1);}
+            30% {transform: translate(-50%,-50%) rotate(45deg) scale(1.4);}
+            50% {transform: translate(-50%,-50%) rotate(45deg) scale(1.2);}
+            70% {transform: translate(-50%,-50%) rotate(45deg) scale(1.4);}
+            100% {transform: translate(-50%,-50%) rotate(45deg) scale(1);}
+
+        }
+    </style>
+</head>
+<body>
+    <div class="envelope">
+        <div class="heart"></div>
+    </div>
+</body>
+</html>
