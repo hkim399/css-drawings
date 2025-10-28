@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shield</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #002BB2;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* .shield {
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 20px red,
+            0 0 0 40px white,
+            0 0 0 60px red;
+
+            position: relative;
+        } */
+
+        .c3 {
+            width: 260px;
+            height: 260px;
+            background-color: #FF4040;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .c2 {
+            width: 210px;
+            height: 210px;
+            background-color: white;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .c1 {
+            width: 150px;
+            height: 150px;
+            background-color: #FF4040;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center {
+            width: 100px;
+            height: 100px;
+            background-color: #306FD4;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .arrow {
+            /* if i comment out the absolute, it will show the rest of the arrows below and stacked to each other. */
+            position: absolute;
+            border-top: 35px solid white;
+            border-left: 48px solid transparent;
+            border-right: 48px solid transparent;
+            border-bottom: 48px solid transparent;
+            /* 0 width and height will give 4 triangles given here */
+            width: 0;
+            height: 0;
+        }
+
+        /* to test out the rotations, use inspect by adding transform and rotate  */
+        .top {
+            top: 35px;
+            left: 2px;
+            
+        }
+        .left {
+            top: 16px;
+            left: -24px;
+            transform: rotate(72deg);
+        }
+        .right {
+            top: 16px;
+            left: 24px;
+            transform: rotate(-72deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="shield">
+        <div class="star"></div>
+    </div> -->
+
+    <!-- When i have time, try to make a cheat sheet for creating consistent stars based on this  -->
+    <div class="c3">
+        <div class="c2">
+            <div class="c1">
+                <div class="center">
+                    <div class="arrow top"></div>
+                    <div class="arrow left"></div>
+                    <div class="arrow right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

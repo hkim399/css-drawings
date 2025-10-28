@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gear</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            background-color: beige;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* .gear {
+            height: 200px;
+            width: 200px;
+            background-color: aquamarine;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            position: relative;
+        }
+        .circle {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .parts {
+            height: 300px;
+            width: 50px;
+            position: absolute;
+            background-color: aquamarine;
+            z-index: -1;
+            border-radius: 5px;
+        }
+        .a {
+            transform: rotate(30deg);
+        }
+        .b {
+            transform: rotate(-30deg);
+        }
+        .c {
+            transform: rotate(90deg);
+        } */
+
+        .gear {
+            width: 110px;
+            height: 110px;
+            background-color: #5dc59d;
+            border-radius: 50%;
+
+
+        }
+
+        .gear-inner {
+            width: 55px;
+            height: 55px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .bar {
+            width: 170px;
+            height: 40px;
+            background-color: #5dc59d;
+            border-radius: 7px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .bar:nth-child(2) {
+            /* if i don't add this code, it will to back to top corner */
+            /* when using tranform, need to redefine it again because if not, it will not count anymore */
+            transform: translate(-50%, -50%) rotate(60deg);
+        }
+
+        .bar:nth-child(3) {
+            /* if i don't add this code, it will to back to top corner */
+            /* when using tranform, need to redefine it again because if not, it will not count anymore */
+            transform: translate(-50%, -50%) rotate(-60deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="gear">
+        <div class="circle"></div>
+        <div class="parts a"></div>
+        <div class="parts b"></div>
+        <div class="parts c"></div>
+    </div> -->
+
+    <div class="gear">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="gear-inner"></div>
+    </div>
+</body>
+</html>
