@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box !important;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            background-color: lightblue;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* position: relative; */
+        }
+
+        .google {
+            width: 100px;
+            height: 100px;
+            position: relative;
+
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+
+            border-bottom: 20px solid green;
+            border-top: 20px solid red;
+            border-left: 20px solid orange;
+            border-right: 20px solid transparent;
+            border-radius: 50%;
+            /* border: 20px solid green; */
+
+            position: absolute;
+
+        }
+
+        .g {
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+
+            border: 20px solid transparent;
+            border-right: 20px solid blue;
+            border-radius: 50%;
+            /* border: 20px solid green; */
+
+            position: absolute;
+            transform: rotate(45deg);
+            z-index: -1;
+
+        }
+
+        .line {
+            position: absolute;
+            width: 50px;
+            height: 20px;
+            background-color: blue;
+            transform: translate(50px, 40px);
+            border-bottom-right-radius: 10px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="google">
+        <div class="circle"></div>
+        <div class="g"></div>
+        <div class="line"></div>
+    </div>
+</body>
+</html>

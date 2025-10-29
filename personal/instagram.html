@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <style>
+        * {
+            box-sizing: border-box !important;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .outer {
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            border-radius: 40px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .inner {
+            background-color: brown;
+            width: 160px;
+            height: 160px;
+            border-radius: 40px;
+            border: 15px solid white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+        }
+
+        .circle {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background-color: orange;
+            border: 15px solid white;
+
+            position: absolute;
+        }
+        .dot {
+            position: absolute;
+            background-color: white;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            top: 15px;
+            right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <div class="circle"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</body>
+</html>

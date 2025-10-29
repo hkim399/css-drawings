@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box !important;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            background-color: aliceblue;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        .o {
+            height: 150px;
+            width: 150px;
+            /* height: 0;
+            width: 0; */
+            background-color: transparent;
+            /* border: 20px solid blue; */
+            border-radius: 50%;
+            border-top: 35px solid #154fc1;
+            border-right: 40px solid #1f67e7;
+            border-left: 40px solid #fb6900;
+            border-bottom: 40px solid transparent;
+            position: absolute;
+        }
+        .o2 {
+            height: 150px;
+            width: 150px;
+            /* height: 0;
+            width: 0; */
+            background-color: transparent;
+            border-radius: 50%;
+            border-top: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-left: 40px solid #fb6900;
+            border-bottom: 40px solid #1f67e7;
+            position: absolute;
+            transform: rotate(-45deg);
+        }
+        .o:before {
+            content: "";
+            height: 5px;
+            width: 90px;
+            background-color: #fb6900;
+            position: absolute;
+            top: -50px;
+            left: -15%;
+            border-radius: 10px;
+        }
+        .logo2 {
+            width: 50px;
+            height: 200px;
+            background-color: antiquewhite;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        .l {
+            position: absolute;
+            width: 20px;
+            height: 80px;
+            background-color: #1f67e7;
+            /* border-radius: 15px; */
+            /* box-shadow: 0 60px 0 0 orange; */
+        }
+        .l:before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 100px;
+            top: -100px;
+            left: 0;
+            position: absolute;
+            background-color: #fb6900;
+        }
+        .logo3 {
+            width: 50px;
+            height: 200px;
+            background-color: antiquewhite;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        .l2 {
+            position: absolute;
+            width: 20px;
+            height: 100px;
+            background-color:#1f67e7;
+        }
+        .l2:before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 100px;
+            top: -100px;
+            left: 0;
+            position: absolute;
+            background-color: #fb6900;
+        }
+
+        .logo4 {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            transform: rotate(180deg);
+        }
+        .o3 {
+            height: 150px;
+            width: 150px;
+            background-color: transparent;
+            /* border: 20px solid blue; */
+            border-radius: 50%;
+            border-top: 40px solid #154fc1;
+            border-right: 40px solid #1f67e7;
+            border-left: 40px solid #fb6900;
+            border-bottom: 40px solid transparent;
+            position: absolute;
+        }
+        .o4 {
+            height: 150px;
+            width: 150px;
+            background-color: transparent;
+            border-radius: 50%;
+            border-top: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-left: 40px solid #fb6900;
+            border-bottom: 40px solid#1f67e7;
+            position: absolute;
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <div class="o"></div>
+        <div class="o2"></div>
+    </div>
+    <div class="logo2">
+        <div class="l"></div>
+    </div>
+    <div class="logo3">
+        <div class="l2"></div>
+    </div>
+    <div class="logo4">
+        <div class="o3"></div>
+        <div class="o4"></div>
+    </div>
+</body>
+</html>
