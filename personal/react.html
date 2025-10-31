@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle {
+            height: 50px;
+            width: 50px;
+            background-color: aqua;
+            border-radius: 50%;
+            position: relative;
+        }
+        .outer {
+            position: absolute;
+            height: 75px;
+            width: 250px;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 2px solid aqua;
+        }
+        .outer:before {
+            content: "";
+            top: 0;
+            left: 0;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 2px solid aqua;
+            transform: rotate(60deg);
+        }
+        .outer:after {
+            content: "";
+            top: 0;
+            left: 0;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 2px solid aqua;
+            transform: rotate(-60deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="outer"></div>
+</body>
+</html>

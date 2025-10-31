@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: yellowgreen;
+        }
+        .donut {
+            background-color: pink;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            border: 2px solid black;
+            position: relative;
+            transform: rotate(-45deg);
+            box-shadow: -10px -10px 0 rgb(216, 109, 109);
+        }
+        .donut:before {
+            content: "";
+            height: 35%;
+            width: 35%;
+            background-color: yellowgreen;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 2px solid black;
+        }
+        .donut:after {
+            content: "";
+            height: 35%;
+            width: 35%;
+            position: absolute;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 10px solid transparent;
+            border-left: 10px solid beige;
+            top: 50%;
+            left: 50%;
+            transform: translate(-65%, -50%) ;
+
+        }
+        .eye-left {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: black;
+            top: 31%;
+            left: 83%;
+        }
+
+        .eye-right {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: black;
+            top: 13%;
+            left: 65%;
+        }
+
+        .mouth {
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="donut">
+        <div class="eye-left"></div>
+        <div class="eye-right"></div>
+        <div class="mouth"></div>
+    </div>
+</body>
+</html>
