@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pikachu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: rgb(225, 183, 14);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pickachu {
+            background-color: rgb(225, 183, 14);
+            height: 300px;
+            width: 400px;
+            position: relative;
+        }
+        .eye {
+            height: 80px;
+            width: 80px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 20%;
+            left: 20%;
+        }
+        .eye:before {
+            content: "";
+            height: 30%;
+            width: 30%;
+            background-color: white;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            border-radius: 50%;
+            animation: eyeroll 3s infinite;
+        }
+        .eye2 {
+            left: 60%;
+        }
+        .nose {
+            height: 20px;
+            width: 15px;
+            background-color: black;
+            border-radius: 10px 10px 20px 20px;
+            position: absolute;
+            top: 50%;
+            left: 48%;
+        }
+        .cheek {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: orangered;
+            position: absolute;
+            top: 50%;
+            left: 10%;
+        }
+        .cheek2 {
+            left: 78%;
+        }
+        .mouth {
+            height: 80px;
+            width: 80px;
+            background-color: brown;
+            position: absolute;
+            border-radius: 10% 10% 50% 50% ;
+            top: 60%;
+            left: 40%;
+            overflow: hidden;
+        }
+        .tung {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background-color: palevioletred;
+            position: absolute;
+            bottom: -20%;
+            left: 11%;
+        }
+        .lip {
+            background-color: rgb(225, 183, 14);
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            position: absolute;
+            top: -35px;
+            left: -20px;
+        }
+        .lip2 {
+            left: 38px;
+        }
+        @keyframes eyeroll {
+            50% {
+                left: 15%
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pickachu">
+        <div class="eye"></div>
+        <div class="eye eye2"></div>
+        <div class="nose"></div>
+        <div class="cheek"></div>
+        <div class="cheek cheek2"></div>
+        <div class="mouth">
+            <div class="tung"></div>
+            <div class="lip"></div>
+            <div class="lip lip2"></div>
+        </div>
+    </div>
+</body>
+</html>

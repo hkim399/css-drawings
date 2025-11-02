@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pickachu</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fcd458;
+        }
+        .container {
+            position: relative;
+            width: 350px;
+            height: 600px;
+            /* background-color: green; */
+        }
+        .eye {
+            width: 64px;
+            height: 64px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 30%;
+            left: 13%;
+        }
+        .eye.-r {
+            left: 65%;            
+        }
+        .eyeball {
+            width: 24px;
+            height: 24px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 13%;
+            left: 44%;
+            animation: eyes 2s ease infinite;
+        }
+        .nose {
+            width: 16px;
+            height: 16px;
+            background-color: #000;
+            position: absolute;
+            left: 47%;
+            top: 44%;
+            border-radius: 8px 8px 16px 16px;
+        }
+
+        .cheek {
+            width: 48px;
+            height: 48px;
+            background-color: #e15b42;
+            border-radius: 50%;
+            position: absolute;
+            top: 48%;
+            left: 4%;
+        }
+        .cheek.-r {
+            left: 80%;
+        }
+        .mouth {
+            width: 96px;
+            height: 96px;
+            background-color: #83342f;
+            border-radius: 16px 16px 50% 50%;
+            position: absolute;
+            left: 36%;
+            top: 50%;
+            overflow: hidden;
+        }
+        .tongue {
+            width: 64px;
+            height: 64px;
+            background-color: #e97b7c;
+            border-radius: 50%;
+            position: absolute;
+            top: 61%;
+            left: 16%;
+        }
+        .mouth:after {
+            content: "";
+            width: 64px;
+            height: 64px;
+            background-color: #fcd458;
+            border-radius: 50%;
+            position: absolute;
+            top: -39%;
+            left: -19%;
+        }
+        .mouth:before {
+            content: "";
+            width: 64px;
+            height: 64px;
+            background-color: #fcd458;
+            border-radius: 50%;
+            position: absolute;
+            top: -39%;
+            left: 46%;
+        }
+
+        @keyframes eyes {
+            0% {
+                left: 44%;
+            }
+            50% {
+                left: 15%;
+            }
+            100% {
+                left: 44%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="eye -r">
+            <div class="eyeball"></div>
+        </div>
+        <div class="eye -l">
+            <div class="eyeball"></div>
+        </div>
+        <div class="nose"></div>
+        <div class="cheek -r"></div>
+        <div class="cheek -l"></div>
+        <div class="mouth">
+            <div class="tongue"></div>
+        </div>
+    </div>
+</body>
+</html>

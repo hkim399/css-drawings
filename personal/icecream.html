@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: aliceblue;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ice-cream {
+            background-color: aquamarine;
+            height: 300px;
+            width: 200px;
+            border-radius: 45% 45% 10% 10%;
+            position: relative;
+            /* animation: bites 1s forwards; */
+        }
+        .inner {
+            height: 200px;
+            width: 50px;
+            background-color: aqua;
+            border-radius: 40%;
+            position: absolute;
+            top: 20%;
+            left: 15%;
+        }
+        .inner-2 {
+            height: 200px;
+            width: 50px;
+            background-color: aqua;
+            border-radius: 40%;
+            position: absolute;
+            top: 20%;
+            right: 15%;
+        }
+        .stick {
+            height: 200px;
+            width: 50px;
+            background-color: brown;
+            border-radius: 40%;
+            position: absolute;
+            top: 70%;
+            left: 38%;
+            z-index: -2;
+        }
+        .bite-1 {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: transparent;
+            border-radius: 50%;
+            top: -5%;
+            left: -10%;
+            /* animation-delay: 1s; */
+            animation: bites 5s forwards;
+            
+        }
+
+        .bite-2 {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: transparent;
+            border-radius: 50%;
+            top: -15%;
+            left: 27%;
+            /* animation-delay: 2s; */
+            animation: bites 3s forwards;
+        }
+
+        .bite-3 {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: transparent;
+            border-radius: 50%;
+            top: -5%;
+            right: -10%;
+            /* animation-delay: 3s; */
+            animation: bites 1s forwards;
+        }
+
+        @keyframes bites {
+            to {
+                background: aliceblue;
+            }
+           
+        }
+
+    </style>
+</head>
+<body>
+    <div class="ice-cream">
+        <div class="inner"></div>
+        <div class="inner-2"></div>
+        <div class="stick"></div>
+        <div class="bite-1"></div>
+        <div class="bite-2"></div>
+        <div class="bite-3"></div>
+    </div>
+</body>
+</html>

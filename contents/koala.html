@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koala</title>
+    <style>
+        * {
+            box-sizing: border-box !important;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            background-color: #25A9FC;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            position: relative;
+            width: 600px;
+            height: 420px;
+            /* background-color: antiquewhite; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .head {
+            position: absolute;
+            width: 300px;
+            height: 285px;
+            background-color: #A6BECF;
+            border-radius: 50%;
+        }
+        .ear {
+            position: absolute;
+            width: 180px;
+            height: 185px;
+            background-color: #A6BECF;
+            border-radius: 50%;
+            top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* z-index: -1; */
+        }
+        .ear-left {
+            left: -60px;
+        }
+        .ear-right {
+            right: -60px;
+        }
+        .inner-ear {
+            position: absolute;
+            height: 80%;
+            width: 80%;
+            background-color: #819CAF;
+            border-radius: 50%;
+        }
+        .head-copy {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #A6BECF;
+            border-radius: 50%;
+            z-index: 2;
+        }
+        .eye {
+            position: absolute;
+            width: 90px;
+            height: 95px;
+            background-color: #fff;
+            z-index: 3;
+            top: 25%;
+            border-radius: 50%;
+        }
+        .eye-left {
+            left: 21%;
+        }
+        .eye-right {
+            right: 21%;
+        }
+        .pupil {
+            position: absolute;
+            width: 25px;
+            height: 29px;
+            background-color: #27354a;
+            border-radius: 50%;
+            top: 35%;
+            left: 36%;
+        }
+        .nose {
+            position: absolute;
+            width: 75px;
+            height: 120px;
+            background-color: #BE845F;
+            z-index: 4;
+            left: 37%;
+            top: 45%;
+            border-radius: 50px;
+        }
+        .hair-left {
+            position: absolute;
+            width: 60px;
+            height: 57px;
+            background-color: #A6BECF;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            top: -8%;
+            left: 30%;
+        }
+        .hair-right {
+            position: absolute;
+            width: 60px;
+            height: 57px;
+            background-color: #A6BECF;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            top: -4%;
+            left: 48%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="head-copy"></div>
+            <div class="ear ear-left">
+                <div class="inner-ear"></div>
+            </div>         
+             <div class="ear ear-right">
+                <div class="inner-ear"></div>
+            </div> 
+            <div class="eye eye-left">
+                <div class="pupil"></div>
+            </div>
+            <div class="eye eye-right">
+                <div class="pupil"></div>
+            </div>
+            <div class="nose"></div>
+            <div class="hair-left"></div>
+            <div class="hair-right"></div>
+        </div>
+                
+    </div>
+</body>
+</html>
