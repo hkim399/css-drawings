@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowman</title>
+    <style>
+        * {
+            box-sizing: border-box !important;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            height: 100vh;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            position: relative;
+            height: 600px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .head {
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+        .hat {
+            position: absolute;
+            width: 140px;
+            height: 68px;
+            display: flex;
+            justify-content: center;
+            transform: translate(35%, -50%) rotate(30deg);
+        }
+        .hat-top {
+            position: absolute;
+            height: 60px;
+            width: 100px;
+            background-color: #000;
+            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+        }
+        .hat-bottom {
+            content: "";
+            position: absolute;
+            width: 140px;
+            height: 8px;
+            background-color: #000;
+            bottom: 0;
+            border-radius: 5px;
+        }
+        .eye-left, .eye-right {
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            background-color: #000;
+            border-radius: 50%;
+            top: 35%;
+        }
+        .eye-left {
+            left: 30%;
+        }
+        .eye-right {
+            right: 30%;
+        }
+        .nose {
+            position: absolute;
+            height: 30px;
+            width: 15px;
+            background-color: orange;
+            clip-path: polygon(50% 100%, 0 0, 100% 0);
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .scarf {
+            position: absolute;
+            height: 45px;
+            width: 150px;
+            background-color: orangered;
+            border-radius: 15%;
+            top: 58%;
+        }
+        .scarf:before, .scarf:after {
+            content: "";
+            height: 100%;
+            background-color: orangered;
+            position: absolute;
+            left: 80%;
+            top: 20%;
+        }
+        .scarf::before {
+            width: 60%;
+            transform: translate(-60%, 100%) rotate(85deg);
+        }
+        .scarf::after {
+            width: 50%;
+            transform: translate(-50%, 60%) rotate(70deg);
+        }
+        .snoman-body {
+            height: 250px;
+            width: 250px;
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            left: 10%;
+            top: 62%;
+            z-index: -1;
+        }
+        .hand-left {
+            position: absolute;
+            background-color: brown;
+            height: 130px;
+            width: 5px;
+            transform: translate(-600%, -20%) rotate(-60deg);
+        }
+        .hand-left:before {
+            content: "";
+            position: absolute;
+            height: 30%;
+            width: 100%;
+            background-color: brown;
+            /* transform: rotate(45deg); */
+            left: 110%;
+            transform: translateX(120%) rotate(45deg);
+            border-bottom-left-radius: 70%;
+        }
+        .hand-right {
+            position: absolute;
+            background-color: brown;
+            height: 130px;
+            width: 5px;
+            right: 0;
+            transform: translate(600%, -20%) rotate(60deg);
+        }
+        .hand-right:before {
+            content: "";
+            position: absolute;
+            height: 30%;
+            width: 100%;
+            background-color: brown;
+            /* transform: rotate(45deg); */
+            right: 310%;
+            transform: translateX(120%) rotate(145deg);
+            border-top-left-radius: 70%;
+        }
+        .button {
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            background-color: #000;
+            border-radius: 50%;
+            left: 50%;
+            top: 25%;
+            transform: translateX(-50%);
+        }
+        .button:before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #000;
+            border-radius: 50%;
+            top: 300%;
+        }
+        .button:after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #000;
+            border-radius: 50%;
+            top: 600%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="hat">
+                <div class="hat-top"></div>
+                <div class="hat-bottom"></div>
+            </div>
+            
+            <div class="eye-left"></div>
+            <div class="eye-right"></div>
+            <div class="nose"></div>
+        </div>
+        <div class="scarf"></div>
+        <div class="snoman-body">
+            <div class="hand-left"></div>
+            <div class="hand-right"></div>
+            <div class="button"></div>
+        </div>
+    </div>
+</body>
+</html>

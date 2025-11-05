@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polar Bear</title>
+    <style>
+        * {
+            box-sizing: border-box !important;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: gray;
+        }
+        .container {
+            background-color: darkcyan;
+            height: 400px;
+            width: 400px;
+            border-radius: 100px;
+            position: relative;
+            z-index: -2;
+            overflow: hidden;
+        }
+        .head {
+            position: absolute;
+            height: 300px;
+            width: 250px;
+            background-color: aquamarine;
+            top: 25%;
+            left: 19%;
+            border-radius: 90px 90px 0 0 ;
+        }
+        .eye {
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            background-color: #000;
+            border-radius: 50%;
+            top: 25%;
+        }
+        .left-eye {
+            left: 25%;
+        }
+        .right-eye {
+            right: 25%;
+        }
+        .chin {
+            position: absolute;
+            height: 70px;
+            width: 60px;
+            background-color: antiquewhite;
+            top: 30%;
+            left: 38%;
+            border-radius: 35%;
+        }
+        .nose {
+            position: absolute;
+            height: 23px;
+            width: 35px;
+            background-color: #000;
+            border-radius: 45%;
+            top: 10%;
+            left: 20%;
+        }
+        .nose:before {
+            content: "";
+            position: absolute;
+            background-color: #000;
+            height: 30px;
+            width: 7px;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .nose:after {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 7px;
+            background-color: #000;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+            bottom: -80%;
+        }
+        .ears {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: antiquewhite;
+            border-radius: 50%;
+            border: 15px solid aquamarine;
+            top: 26%;
+            z-index: -1;
+        }
+        .left-ear {
+            left: 10%;
+        }
+        .right-ear {
+            right: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="eye left-eye"></div>
+            <div class="eye right-eye"></div>
+            <div class="chin">
+                <div class="nose"></div>
+            </div>
+        </div>
+        <div class="ears left-ear"></div>
+        <div class="ears right-ear"></div>
+    </div>
+</body>
+</html>

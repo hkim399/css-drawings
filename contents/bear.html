@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bear</title>
+    <style>
+        * {
+            /* box-sizing: border-box !important; */
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #45444E;
+        }
+        .container {
+            position: relative;
+            width: 450px;
+            height: 400px;
+            background-color: #3d98B7;
+            border-radius: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .head {
+            position: absolute;
+            width: 240px;
+            height: 300px;
+            background-color: #FAFFCE;
+            border-radius: 90px 90px 0 0 ;
+        }
+        .ear-left, .ear-right {
+            position: absolute;
+            width: 75px;
+            height: 75px;
+            background-color: #D7E2E8;
+            border: 15px solid #FAFFCE;
+            border-radius: 50%;
+        }
+        .ear-left {
+            left: -15%;
+        }
+        .ear-right {
+            right: -15%;
+        }
+        .head-copy {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #FAFFCE;
+            border-radius: 90px 90px 0 0;
+            z-index: 2;
+        }
+        .left-eye, .right-eye {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-color: #2A3144;
+            z-index: 3;
+            border-radius: 50%;
+            top: 25%;
+        }
+        .left-eye {
+            left: 25%;
+        }
+        .right-eye {
+            right: 25%;
+        }
+        .muzzle {
+            position: absolute;
+            width: 72px;
+            height: 75px;
+            background-color: #D1E1E2;
+            z-index: 4;
+            border-radius: 45%;
+            top: 28%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nose {
+            position: absolute;
+            background-color: #22293A;
+            width: 32px;
+            height: 20px;
+            border-radius: 40%;
+            top: 15%;
+        }
+        .bottom-nose {
+            position: absolute;
+            width: 7px;
+            height: 30px;
+            background-color: #22293A;
+        }
+        .mouth {
+            position: absolute;
+            width: 36px;
+            height: 7px;
+            background-color: #22293A;
+            top: 65%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="head-copy"></div>
+            <div class="ear-left"></div>
+            <div class="ear-right"></div>
+            <div class="left-eye"></div>
+            <div class="right-eye"></div>
+            <div class="muzzle">
+                <div class="nose"></div>
+                <div class="bottom-nose"></div>
+                <div class="mouth"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

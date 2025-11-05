@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owl</title>
+    <style>
+        * {
+            box-sizing: border-box !important;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #222729;
+        }
+        .container {
+            position: relative;
+            width: 600px;
+            height: 500px;
+            /* background-color: lightgreen; */
+            display: flex;
+            justify-content: center;
+            z-index: -2;
+        }
+        .head {
+            position: absolute;
+            width: 230px;
+            height: 130px;
+            background-color: #6d4b27;
+        }
+        .head:before {
+            content: "";
+            width: 250px;
+            height: 230px;
+            background-color: #222729;
+            position: absolute;
+            border-radius: 50%;
+            bottom: 50px;
+            left: -10px;
+        }
+        .eye-container {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background-color: #6d4b27;
+            border-radius: 50%;
+            top: 80px;
+        }
+        .eye-container.left {
+            left: 185px;
+        }
+        .eye-container.right {
+            right: 185px;
+        }
+        .eye-container:before {
+            content: "";
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            background-color: #fff;
+            border-radius: 50%;
+            bottom: 7px;
+        }
+        .eye-container.left:before {
+            right: -5px;
+        }
+        .eye-container.right:before {
+            left: -5px;
+        }
+        .eye {
+            position: absolute;
+            width: 75px;
+            height: 75px;
+            background-color: #000;
+            border-radius: 50%;
+            border: 10px solid #f0ae1b;
+            top: 20px;
+        }
+        .left-eye {
+            left: 30px;
+        }
+        .right-eye {
+            right: 30px
+        }
+        .beak {
+            position: absolute;
+            width: 45px;
+            height: 60px;
+            background-color: #f0ae1b;
+            top: 160px;
+            /* use clippy website from README and use trapezoid */
+            clip-path: polygon(0 0, 100% 0, 60% 100%, 40% 100%);
+            border-radius: 50%;
+        }
+        .wings {
+            position: absolute;
+            width: 250px;
+            height: 300px;
+            background-color: #6d4b27;
+            top: 150px;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        .wings:before {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 310px;
+            background-color: #9e784d;
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .wings:after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 230px;
+            background-color: #fff;
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .foot {
+            position: absolute;
+            height: 40px;
+            width: 15px;
+            background-color: #f0ae1b;
+            top: 420px;
+            border-radius: 50%;
+            border: 1px solid #9e784d;
+        }
+        .left-foot {
+            left: 220px;
+        }
+        .right-foot {
+            right: 220px;
+        }
+        .foot:before, .foot:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #f0ae1b;
+            border-radius: 50%;
+            border: 1px solid #9e784d;
+        }
+        .left-foot:before {
+            left: 15px;
+        }
+        .right-foot:before {
+            right: 15px;
+        }
+        .left-foot:after {
+            left: 30px;
+        }
+        .right-foot:after {
+            right: 30px;
+        }
+
+        .branch {
+            position: absolute;
+            width: 400px;
+            height: 15px;
+            bottom: 25px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        
+        .forehead {
+            width: 200px;
+            height: 50px;
+            background-color: #6d4b27;
+            position: absolute;
+            top: 75px;
+            /* use clippy to get triangle shape */
+            /* center bottom, top left, top right */
+            /* x axis and y axis */
+            clip-path: polygon(50% 100%, 0 0, 100% 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head"></div>
+        <div class="eye-container left">
+            <div class="eye left-eye"></div>
+        </div>
+        <div class="eye-container right">
+            <div class="eye right-eye"></div>
+        </div>
+
+        <div class="forehead"></div>
+
+        <div class="beak"></div>
+        <div class="wings"></div>
+        <div class="foot left-foot"></div>
+        <div class="foot right-foot"></div>
+        <div class="branch"></div>
+    </div>
+</body>
+</html>
