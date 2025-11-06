@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vampire</title>
+    <style>
+        * {
+            box-sizing: border-box !important;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .vampire {
+            width: 600px;
+            height: 100%;
+            background-color: #47526d;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .head {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background-color: #edd9f0;
+            border-radius: 50%;
+            top: 10%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .hair {
+            position: absolute;
+            width: 450px;
+            height: 135px;
+            background-color: #333;
+        }
+
+        .hair:before,
+        .hair:after {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background-color: #edd9f0;
+            border-radius: 50%;
+            top: 50%;
+        }
+
+        .hair:before {
+            left: 1%;
+        }
+
+        .hair:after {
+            right: 1%;
+        }
+        .left-eye, .right-eye {
+            position: absolute;
+            width: 115px;
+            height: 115px;
+            background-color: #fff;
+            top: 30%;
+            border-radius: 50%;
+        }
+        .left-eye {
+            left: 18%;
+        }
+        .right-eye {
+            right: 18%;
+        }
+        .left-eye::before, .right-eye::before {
+            position: absolute;
+            content: "";
+            height: 70px;
+            width: 70px;
+            background-color: red;
+            border-radius: 50%;
+            left: 30%;
+            top: 20%;
+        }
+        .left-eye::after, .right-eye::after {
+            position: absolute;
+            content: "";
+            height: 58px;
+            width: 58px;
+            background-color: #000;
+            border-radius: 50%;
+            left: 38%;
+            top: 20%;
+        }
+        .left-eye .brow, .right-eye .brow {
+            position: absolute;
+            width: 140px;
+            height: 50px;
+            background-color: #edd9f0;
+            top: -5%;
+            left: -10%;
+            z-index: 1;
+        }
+        .left-eye .brow {
+            transform: rotate(15deg);
+        }
+        .right-eye .brow {
+            transform: rotate(-15deg);
+        }
+        .nose {
+            position: absolute;
+            width: 44px;
+            height: 22px;
+            background-color: #edd9f0;
+            top: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: hidden;
+        }
+        .nose:before {
+            content: "";
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            background-color: #333;
+            bottom: 0;
+            border-radius: 50%;
+        }
+        .nose:after {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #edd9f0;
+            bottom: 2px;
+            left: 2px;
+            border-radius: 50%;
+        }
+        .mouth {
+            position: absolute;
+            width: 225px;
+            height: 22px;
+            /* background-color: #edd9f0; */
+            top: 70%;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: hidden;
+        }
+        .mouth:before {
+            content: "";
+            position: absolute;
+            width: 225px;
+            height: 44px;
+            background-color: #333;
+            top: 0;
+            border-radius: 50%;
+        }
+        .mouth:after {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 44px;
+            background-color: #edd9f0;
+            top: 2px;
+            left: 2px;
+            border-radius: 50%;
+        }
+        .left-tooth, .right-tooth {
+            position: absolute;
+            width: 36px;
+            height: 45px;
+            background-color: #fff;
+            top: 71%;
+            clip-path: polygon(50% 100%, 0 0, 100% 0);
+        }
+        .left-tooth {
+            left: 35%;
+            transform: rotate(-5deg);
+        }
+        .right-tooth {
+            right: 35%;
+            transform: rotate(5deg);
+        }
+
+        .collar {
+            position: absolute;
+            background-color: #000;
+            height: 40%;
+            width: 100%;
+            top: 65%;
+            /* z-index: ; */
+            clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
+        }
+        .cape {
+            position: absolute;
+            width: 60%;
+            height: 30%;
+            background-color: #fff;
+            bottom: 0;
+            border-radius: 50% 50% 0 0;
+        }
+        .bow {
+            position: absolute;
+            height: 170px;
+            width: 100px;
+            background-color: #000;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .button {
+            width: 15px;
+            height: 15px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vampire">
+        <div class="head">
+            <div class="hair"></div>
+            <div class="left-eye">
+                <div class="brow"></div>
+            </div>
+            <div class="right-eye">
+                <div class="brow"></div>
+            </div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="left-tooth"></div>
+            <div class="right-tooth"></div>
+        </div>
+        <div class="collar"></div>
+        <div class="cape"></div>
+        <div class="bow">
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+        </div>
+    </div>
+</body>
+
+</html>

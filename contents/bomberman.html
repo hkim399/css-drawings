@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomberman</title>
+    <style>
+        * {
+            /* box-sizing: border-box !important; */
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #b286bdcc;
+        }
+        .container {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            /* background-color: aqua; */
+            display: flex;
+            justify-content: center;
+        }
+        .head-top {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            background-color: #e57299;
+            border-radius: 50%;
+            top: -10px;
+            border: 2px solid #000;
+        }
+        .head {
+            position: absolute;
+            width: 144px;
+            height: 144px;
+            background-color: #fff;
+            border-radius: 64px 64px 56px 56px;
+            border: 2px solid #000;
+            top: 16px;
+            z-index: 2;
+        }
+        .face {
+           position: absolute; 
+           width: 112px;
+           height: 112px;
+           background-color: #fce5c3;
+           border-radius: 48px;
+           border: 2px solid #000;
+           top: 32px;
+           z-index: 2;
+        }
+        .face:before, .face:after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 48px;
+            background-color: #000;
+            top: 32px;
+            animation: eyes 3s 2s ease infinite;
+        }
+        .face::before {
+            left: 30px;
+        }
+        .face::after {
+            left: 76px;
+        }
+
+        @keyframes eyes {
+            0% {
+                transform: scaleY(1);
+            }
+            50% {
+                transform: scaleY(0.2);
+            }
+            100% {
+                transform: scaleY(1);
+            }
+        }
+
+        .bomber-body {
+            position: absolute;
+            width: 96px;
+            height: 112px;
+            background-color: #7878ac;
+            border-radius: 160px 160px 144px 144px;
+            top: 148px;
+            border: 2px solid #000;
+            z-index: 1;
+        }
+        .right-arm {
+            position: absolute;
+            width: 16px;
+            height: 72px;
+            background-color: #fff;
+            top: 152px;
+            left: 220px;
+            transform: rotate(-37deg);
+            border: 2px solid #000;
+            /* z-index: ; */
+            border-top-right-radius: 16px;
+        }
+        .right-hand {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            background-color: #e57299;
+            top: 208px;
+            left: 238px;
+            border-radius: 50%;
+            border: 2px solid #000;
+        }
+        .left-arm {
+            position: absolute;
+            width: 16px;
+            height: 40px;
+            background-color: #fff;
+            top: 165px;
+            left: 120px;
+            border: 2px solid #000;
+            border-top-left-radius: 16px;
+            z-index: 1;
+            border-top-right-radius: 8px;
+            /* negative 11deg on x axis horizontally, negative 35deg on y axis vertically */
+            transform: skew(-11deg, -37deg);
+        }
+        .left-hand {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            background-color: #e57299;
+            top: 185px;
+            left: 99px;
+            border-radius: 50%;
+            border: 2px solid #000;
+            z-index: 1;
+            animation: wave 5s ease infinite;
+        }
+        .left-hand:before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 18px;
+            background-color: #e57299;
+            top: -21px;
+            left: 18px;
+            border-radius: 16px 16px 0 0;
+            border: 2px solid #000;
+            transform: rotate(9deg);
+        }
+        .left-hand:after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 18px;
+            background-color: #e57299;
+            top: -19px;
+            left: 0;
+            border-radius: 16px 16px 0 0;
+            border: 2px solid #000;
+            transform: rotate(-22deg);
+        }
+        @keyframes wave {
+            0% {
+                transform: rotate(-10deg);
+            }
+            50% {
+                transform: rotate(20deg);
+            }
+            100% {
+                transform: rotate(-10deg);
+            }
+        }
+
+        .left-leg, .right-leg {
+            position: absolute;
+            width: 16px;
+            height: 56px;
+            background-color: #fff;
+            top: 256px;
+            border: 2px solid #000;
+        }
+        .left-leg {
+            left: 144px;
+            transform: rotate(3deg);
+        }
+        .right-leg {
+            left: 184px;
+            transform: rotate(-3deg);
+        }
+        .left-foot, .right-foot {
+            position: absolute;
+            width: 40px;
+            height: 24px;
+            background-color: #7878ac;
+            border-radius: 32px;
+            border: 2px solid #000;
+            top: 304px;
+        }
+        .left-foot {
+            left: 130px;
+        }
+        .right-foot {
+            left: 175px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head-top"></div>
+        <div class="head"></div>
+        <div class="face"></div>
+        <div class="bomber-body"></div>
+        <div class="right-arm"></div>
+        <div class="right-hand"></div>
+        <div class="left-arm"></div>
+        <div class="left-hand"></div>
+        <div class="left-leg"></div>
+        <div class="left-foot"></div>
+        <div class="right-leg"></div>
+        <div class="right-foot"></div>
+    </div>
+</body>
+</html>
